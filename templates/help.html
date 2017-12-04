@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Help Page">
+    <meta name="author" content="Todd Lizambri">
+
+    <title>Streamer</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+ <div id="header">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	    <span class="sr-only">Toggle navigation</span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	  </button>
+	  <h:panelGroup>
+	    <a class="navbar-brand" href="/">Streamer</a>
+	  </h:panelGroup>
+	</div>
+
+	<div class="collapse navbar-collapse">
+	  <ul class="nav navbar-nav navbar-right">
+	    <li id="homeNavItem"><a href="/">Home</a></li>
+	    <li id="controlNavItem"><a href="/controlpanel">Control</a></li>
+	    <li id="HelpNavItem"><a href="/help">Help</a></li>
+	  </ul>
+	</div>
+      </div>
+     </nav>
+ </div>
+ <div id="body" class="container main">
+            <br/><br/><br/>
+	    <h1>Help</h1>
+	    <p>The Streamer interface is designed to help us easily change the information displayed on the atteched wallscreen. This interface supports API commands directly or you can simply use the selector on the control panel.
+</p>
+	    <p>The control panel has been configured to display a set of pre-defined streams that should be present (coming from dedicated VMs to stream content). If you would like additional values added to the interface, you will need to open a ticket or have someone edit the control.html file on this device.</p>
+	    <p>However, if you are a little more adventurous, simply stream content to the 'streamer' host and use the API to modify the wallscreen to display the streamed content. The following commnad can be used to pull the streamed content and display it on this device.
+</p>
+<p>http://<i><b>ip of this device</b></i>/control?server=<i><b>stream server</b></i>&application=<i><b>application name</b></i>&stream=<i><b>stream</b></i></p>
+<p>If you choose to leave any of the parameters out of the request, the following defualts will be used..or it will simply use the current value (from the previous request).</p>
+<ul>
+<li>server = stream.ihire.local</li>
+<li>application = live</li>
+<li>stream = ...as defined in the displayscreenWS.py file.
+</ul>
+<div>
+
+        <!-- Bootstrap core JavaScript
+	     ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+  <script src="static/js/jquery-3.2.1.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
