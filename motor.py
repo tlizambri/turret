@@ -26,8 +26,14 @@ m2yellow  = gpiozero.OutputDevice(27)
 m2orange  = gpiozero.OutputDevice(22)
 
 ignite1 = gpiozero.OutputDevice(12)
+ignite2 = gpiozero.OutputDevice(16)
+ignite3 = gpiozero.OutputDevice(20)
+ignite4 = gpiozero.OutputDevice(21)
 
 ignite1.on();
+ignite2.on();
+ignite3.on();
+ignite4.on();
 m1blue.off();
 m1pink.off();
 m1yellow.off();
@@ -40,8 +46,24 @@ m2orange.off();
 
 def light1():
 	ignite1.off()
+	ignite2.off()
 	sleep(1)
+	ignite2.on()
 	ignite1.on()
+
+def light2():
+        ignite3.off()
+        ignite2.off()
+        sleep(1)
+        ignite2.on()
+        ignite3.on()
+
+def light3():
+        ignite3.off()
+        ignite4.off()
+        sleep(1)
+        ignite4.on()
+        ignite3.on()	
 
 def left():
         delay = 0.001
@@ -320,7 +342,9 @@ runCommand = { 'up' : up,
         'down':down,
         'right':right,
         'left':left,
-        'light1':light1 }
+        'light1':light1,
+        'light2':light2,
+        'light3':light3 }
 
 ################################################
 # Setup the default route.
