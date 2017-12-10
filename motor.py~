@@ -34,16 +34,15 @@ ignite1.on();
 ignite2.on();
 ignite3.on();
 ignite4.on();
+m1blue.off();
+m1pink.off();
+m1yellow.off();
+m1orange.off();
 
-m1blue.on();
-m1pink.on();
-m1yellow.on();
-m1orange.on();
-
-m2blue.on();
-m2pink.on();
-m2yellow.on();
-m2orange.on();
+m2blue.off();
+m2pink.off();
+m2yellow.off();
+m2orange.off();
 
 def light1():
 	ignite1.off()
@@ -377,7 +376,7 @@ def control():
         ####################################################
         # Process all the command parameters from the URL.
         ####################################################
-        command = request.args.get('command')
+        command = request.args.get('command','left')
 
         runCommand[command]()
 

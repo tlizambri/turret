@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Help Page">
+    <meta name="author" content="Todd Lizambri">
+
+    <title>Turret</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/toggle.css" rel="stylesheet">
+    <script src="static/js/jquery-3.2.1.min.js">
+  </head>
+
+  <body>
+ <script>
+      $(document).ready(function(){
+
+      $([id='ignitorCheckbox']).onclick() {
+      $([id='fire1'].prop('disabled',true);
+      };
+
+      });
+ </script>
+ <div id="header">
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	    <span class="sr-only">Toggle navigation</span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	  </button>
+	  <h:panelGroup>
+	    <a class="navbar-brand" href="/">Turret</a>
+	  </h:panelGroup>
+	</div>
+
+	<div class="collapse navbar-collapse">
+	  <ul class="nav navbar-nav navbar-right">
+	    <li id="homeNavItem"><a href="/">Home</a></li>
+	    <li id="controlNavItem"><a href="/controlpanel">Control</a></li>
+	    <li id="HelpNavItem"><a href="/help">Help</a></li>
+	  </ul>
+	</div>
+      </div>
+     </nav>
+ </div>
+
+ <div id="body" class="container main">
+
+   <br/><br/><br/>
+   <h1>Control Panel</h1>   
+
+   <table>
+	      <tr>
+		<td colspan=2/>
+		<td></td>
+		<td>
+		  <form class="form" action="/control" method="get" role="form">
+		    <input type="hidden" name="command" value="up"/>
+		    <button type="submit" class="btn btn-block btn-primary">UP</button>
+		  </form>
+		</td>
+		<td></td>
+	      </tr>
+	      <tr>
+		<td colspan=2/>
+		<td>
+		  <form class="form" action="/control" method="get" role="form">
+		    <input type="hidden" name="command" value="left"/>
+		    <button type="submit" class="btn btn-block btn-primary">LEFT</button>
+		  </form>
+		</td>
+		<td></td>
+		<td>
+		  <form class="form" action="/control" method="get" role="form">
+		    <input type="hidden" name="command" value="right"/>
+		    <button type="submit" class="btn btn-block btn-primary">RIGHT</button>
+		  </form>
+		</td>
+		</tr>
+	      <tr>
+		<td colspan=2/>
+		<td></td>
+		<td>
+		  <form class="form" action="/control" method="get" role="form">
+		    <input type="hidden" name="command" value="down"/>
+		      <button type="submit" class="btn btn-block btn-primary">DOWN</button>
+		  </form>
+		</td>
+		<td></td>
+	      </tr>
+	      <tr><td colspan=5><hr/></td></tr>
+	      <tr>
+		<td colspan=2>
+		  <label class="switch">
+		    <input id="ignitersCheckbox" type="checkbox">
+		      <span class="slider round"></span>
+		  </label>
+			</td>
+		<td cellspacing=3>
+		  <form class="form" action="/control" method="get" role="form">
+		    <input type="hidden" name="command" value="light1"/>
+		      <button id="fire1" type="submit" class="btn btn-danger" style="margin: 5px 5px 5px 5px">FIRE 1</button>
+		  </form>
+		</td>
+		<td>
+		  <form class="form" action="/control" method="get" role="form">
+		    <input type="hidden" name="command" value="light2"/>
+		      <button id="fire2" type="submit" class="btn btn-danger" style="margin: 5px 5px 5px 5px" >FIRE 2</button>
+		  </form>
+		</td>
+		<td>
+		  <form class="form" action="/control" method="get" role="form">
+		    <input type="hidden" name="command" value="light3"/>
+		      <button id="fire3" type="submit" class="btn btn-danger" style="margin: 5px 5px 5px 5px">FIRE 3</button>
+		  </form>
+		</td>
+	      </tr>
+	      <tr>
+		<td colspan=2>
+		</td>
+		<td cellspacing=3>
+		  <form class="form" action="/control" method="get" role="form">
+		    <input type="hidden" name="command" value="light1"/>
+		      <button id="fire4" type="submit" class="btn btn-danger" style="margin: 5px 5px 5px 5px">FIRE 4</button>
+		  </form>
+		</td>
+		<td>
+		  <form class="form" action="/control" method="get" role="form">
+		    <input type="hidden" name="command" value="light2"/>
+		      <button id="fire5" type="submit" class="btn btn-danger" style="margin: 5px 5px 5px 5px" >FIRE 5</button>
+		  </form>
+		</td>
+		<td>
+		  <form class="form" action="/control" method="get" role="form">
+		    <input id="fire6" type="hidden" name="command" value="light3"/>
+		      <button type="submit" class="btn btn-danger" style="margin: 5px 5px 5px 5px">FIRE 6</button>
+		  </form>
+		</td>
+	      </tr>
+   </table>
+</div>
+
+        <!-- Bootstrap core JavaScript
+	     ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+  <script src="static/js/jquery-3.2.1.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  </body>
+</html>
+

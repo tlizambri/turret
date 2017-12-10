@@ -26,7 +26,7 @@
 	    <span class="icon-bar"></span>
 	  </button>
 	  <h:panelGroup>
-	    <a class="navbar-brand" href="/">Turret</a>
+	    <a class="navbar-brand" href="/">Streamer</a>
 	  </h:panelGroup>
 	</div>
 
@@ -43,8 +43,8 @@
  <div id="body" class="container main">
 
      <br/><br/><br/>
-    <h2>Be Safe. Have Fun.</h2>
-    <p>Welcome. This project was designed as a learning project to explore the features of a raspberry pi, enhance 3D printing skills, get your feet wet with electronics, and learn a little python along the way.</p>
+    <h1>Have Fun.</h1>
+    <p>Welcome. This project was designed as a learning project to explore the features of a raspberry pi, enhance 3D printing skills, get your feet wet with electrons, and learn a little python along the way.</p>
     <p>
       <a href="/controlpanel" class="btn btn-success">Get Started</a>
     </p>
