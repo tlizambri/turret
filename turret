@@ -5,12 +5,14 @@
 
     case "$1" in
             start)
-                    /usr/bin/python3 /home/pi/dev/turret/motor.py > /dev/null &
+                    /usr/bin/python3 /home/pi/dev/turret/turret.py > /dev/null &
                     ;;
-
+	    stop)
+		    ps -eaf | grep '/usr/bin/python3 /home/pi/dev/turret/turret.py' | grep -v grep | awk '{print$2}' | xargs kill > /dev/null
+		    ;;
             *)
 
-            echo "Usage: /etc/init.d/$DEAMON_NAME {start}"
+            echo "Usage: /etc/init.d/$DAEMON_NAME {start | stop }"
             exit 1
             ;;
     esac
