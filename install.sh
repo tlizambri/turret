@@ -11,8 +11,9 @@ apt-get install dhcpcd
 cp etc/dhcpcd/dhcpcd.conf /etc/dhcpcd
 cp etc/hostapd/hostapd.conf /etc/hostapd
 cp etc/dnsmasq/dnsmasq.conf /etc/dnsmasq
-cp turret /etc/init.d
+cp etc/init.d/turret /etc/init.d
 ln /etc/init.d/turret /etc/rc3.d/S01turret
+chmod 755 /etc/init.d/turret
 
 cp -r static /opt/turret
 cp -r templates /opt/turret
