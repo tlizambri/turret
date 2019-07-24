@@ -1,0 +1,27 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          turret
+# Required-Start:    $local_fs
+# Required-Stop:     
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: turret daemon
+### END INIT INFO
+
+    # Change the next 3 lines to suit where you install your script and what you want to call it
+    DAEMON_NAME=turret
+
+    case "$1" in
+            start)
+                    /usr/bin/python3 /opt/turret/turret.py > /dev/null &
+                    ;;
+	    stop)
+		    ps -eaf | grep '/usr/bin/python3 /opt/turret/turret.py' | grep -v grep | awk '{print$2}' | xargs kill > /dev/null
+		    ;;
+            *)
+
+            echo "Usage: /etc/init.d/$DAEMON_NAME {start | stop }"
+            exit 1
+            ;;
+    esac
+    
